@@ -1,1 +1,70 @@
 # HintAnim-EditText
+
+[![](https://jitpack.io/v/cctanfujun/HintAnim-EditText.svg)](https://jitpack.io/#cctanfujun/HintAnim-EditText)
+
+## Looks like
+
+![hint-anim](./img/Hint-Anim.gif)
+
+
+## How TO USE
+
+Step 1. Add the JitPack repository to your build file
+
+gradle
+maven
+sbt
+leiningen
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
+	}
+Step 2. Add the dependency
+
+	dependencies {
+	        compile 'com.github.cctanfujun:HintAnim-EditText:v0.1'
+	}
+
+Step 3. declare in your xml
+	
+	<com.xiaochendev.lib.HintAnimEditText
+        android:id="@+id/edittxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/search"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:singleLine="true"
+        />
+
+change hint with anim like this：
+
+	mEditText.changeHintWithAnim("XXX");        
+
+Note: you should use `setHintString("xxx")` change hint without anim or `changeHintWithAnim("XXX")` change hint with anim   instead of EditText’s hint.
+
+## I Want to Say
+
+I think this is a really easy widget,maybe you need't dependence it in your build.gradle,but it provided a way to change hint with anim,when you have to do this,you can learn something from source code.
+
+
+## License
+
+    Copyright 2015 cctanfujun
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.        
+        	
