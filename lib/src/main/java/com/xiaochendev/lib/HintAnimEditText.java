@@ -77,6 +77,11 @@ public class HintAnimEditText extends EditText {
      */
     public void setHintString(final CharSequence hint) {
         mAnimHintString = hint;
+        if (mAnimHintString != null) {
+            mTextLength = getPaint().measureText(mAnimHintString.toString());
+        }else{
+            mTextLength = 0;
+        }
         invalidate();
     }
 
